@@ -1,0 +1,17 @@
+stages:
+  - "download"
+  - "config"
+  - "service"
+image: alpine
+
+1.1-install-binaries:
+  stage: download
+  script: sh download.sh
+
+2.1-configure:
+  stage: config
+  script: sh config.sh
+
+3.1-service:
+  stage: service
+  script: sh service.sh
